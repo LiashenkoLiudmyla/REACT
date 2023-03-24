@@ -1,53 +1,63 @@
-
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      
-      <li className='Li' >Home</li>
-      <li className='Li'>News </li>
-      <li className='Li'>CallBack </li>
-      <li className='Li'>Contacts</li>
-     
-    </div>
-  );
+
+const Home = () => {                
+  return <div className='nav'>Home page</div>;
+};
+const News = () => {                 
+  return <div className='nav'>News page</div>;
+};
+
+const CallBack = () => {              
+  return <div className='nav'>CallBack page</div>;
+};
+
+const Contacts = () => {             
+  return <div className='nav'>Contacts page</div>;
+};
+
+const pages = {
+  home: <Home/>,
+  news: <News/>,
+  callBack: <CallBack/>,
+  contacts: <Contacts/>,
+}
+
+const links = [ 
+  {id: 1, title: "home", href: "#", text: "Home page"},
+  {id: 2, title: "news", href: "#", text: "News page"},
+  {id: 3, title: "callBack", href: "#", text: "CallBack page"},
+  {id: 4, title: "contacts", href: "#", text: "Contacts page"}
+]
+
+class App extends React.Component {
+  state = {currentPage: 'home'}
+  onClick = (title) => {
+
+ this.setState({currentPage: title })  
+
+  };
+
+  render (){
+    return (
+      <nav>
+        {links.map(({href,title}) => (
+          <a 
+            href={href} 
+            onClick={() => this.onClick(title)}
+            key={title}
+            >
+            {title}
+            </a>
+        )
+          )}
+          <div>
+            {pages[this.state.currentPage]}
+          </div>
+      </nav>
+    )
+  }
 }
 
 export default App;
-
-
-
-
-
-
-const Home extends React.Component{
-  render(){
-  return [
-  <div className='li'>Home page</div>, 
-  <div className='li'>News</div>,
-  <div className='li'>CallBack</div>, 
-  <div className='li'>Contacts</div>
-];
-}
-};
-
-
-
-export default Home;
-
-
-
-
-
-
-
-// function Home (props)  {
-//   return (<li className='Li' >Home page</li>);
-// }
-
-// export default Home;
-
-
-
-
