@@ -31,7 +31,7 @@ const links = [
   {id: 4, title: "contacts", href: "#", text: "Contacts page"}
 ]
 
-class App extends React.Component {
+class App extends Component {
   state = {currentPage: 'home'}
   onClick = (title) => {
 
