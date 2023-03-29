@@ -2,6 +2,7 @@
  import Form from './components/Form.js';
  import User from './components/User.js';
  import NameForm from './components/NameForm.js'
+ import LifeCycle from './components/Lifecycle.js'
 
 import './App.css';
 
@@ -15,6 +16,7 @@ function App() {
     <User/>
     <Form/>
     <NameForm/>
+    <LifeCycle/>
     </div>
   );
 }
