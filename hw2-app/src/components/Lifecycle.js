@@ -10,10 +10,10 @@ import React, { Component } from 'react';
         
       }
     componentDidMount() { 
-      
+      document.title = this.state.title 
     }
     componentDidUpdate() { 
-        document.title = this.state.title 
+       
         
     }
     componentWillUnmount() {
