@@ -7,42 +7,47 @@ class Form extends Component {
         this.state = {
             name: '',
             surname: '',
-            error: false,
-            
+            error: 'з твоїми даними якийсь курйоз в даних мінімум по 4 чимволи ;(',            
         }
     }
-
 myInputName = (e) => {
     this.setState({name: e.target.value})  
 }
-
 myInputSurName = (e) => {
     this.setState({surname: e.target.value})  
 }
+onSubmit = (event) => {
+    event.preventDefault();
+    const { name, surname, error } = this.state;
 
+        if (name.length === 0){ 
+        alert('Error: введіть Імя')
+        }else 
+            if (surname.length === 0){ 
+                alert('Error: введіть прізвище')
+        }else 
+            if(name.length < 3 && surname.length < 3 ){
+                alert(`${this.state.error}`) 
+        }else{
+            alert(`Welcome ${name} ${surname}`)
+        }   
+};
 render() {
     const {name, surname} = this.state;
     return (
         <div>
-            <form>
+            <br/><br/>
+            <form onSubmit={this.onSubmit}>
                 <input 
                 onChange={this.myInputName} 
                 placeholder='Name'
-                value={name} />
-                {surname.length >= 4  ? 
-                '' : 'Введіть будь ласка ваші дані '}
-            </form>
-
-            <form>
+                value={name} /><br/>
                 <input 
                 onChange={this.myInputSurName} 
                 placeholder='Surname'
-                value={surname}/>
-                {surname.length >= 4  ? 
-                alert('Вітаємо') : 'Введіть будь ласка ваші дані '}
+                value={surname}/><br/>
+                <button type='submit'>Submit</button>
             </form>
-
-            
             <p>{this.state.name}</p>
             <p>{this.state.surname}</p>
         </div>

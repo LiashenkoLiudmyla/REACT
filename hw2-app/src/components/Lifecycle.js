@@ -13,6 +13,7 @@ import React, { Component } from 'react';
       document.title = this.state.title 
     }
     componentDidUpdate() { 
+      document.title = this.state.title 
        
         
     }
@@ -24,6 +25,7 @@ render() {
     
   return(  
     <div>
+      <br/><br/>
         <button onClick = {() => this.setState({ title: 'HW3' })}>Змінити title
         </button>
     </div>
