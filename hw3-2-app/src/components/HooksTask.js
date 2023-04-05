@@ -1,4 +1,5 @@
-import React, { useEffect , useState } from "react";
+import React, { useEffect , useState, useContext } from "react";
+import {DataContext} from './Datacontext'
 
 
 const HooksTask = () => {
@@ -11,13 +12,13 @@ const HooksTask = () => {
             .then((json) => setState({albums: json}))
             
     },[]);
-
-         const {albums} = state;
+     
+    const value = useContext(DataContext)
 
         return(
                 <div>
-                    {albums.map
-                        (albums =>
+                    <p>useContext</p>
+                    {value.map(albums =>
                             <div key = {albums.id}>{albums.id} - {albums.userId} - {albums.title}</div> 
                         )
                     }

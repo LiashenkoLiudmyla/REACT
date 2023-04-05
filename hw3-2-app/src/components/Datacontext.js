@@ -14,11 +14,12 @@ class DataProvider extends Component {
     
     render() {
         const { albums } = this.state;      
-
+        
         return (
                     <DataContext.Provider value={ albums }>
                         {this.props.children}
                     </DataContext.Provider>
+                   
                 );
         
     }

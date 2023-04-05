@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { DataContext } from "./Datacontext";
+import HooksTask from "./HooksTask";
 
 class Albums extends Component {
    
@@ -9,8 +10,9 @@ class Albums extends Component {
         <div>
             <p>TASK 2</p>            
             <div>
-                {/* <DataContext.Consumer>
+                <DataContext.Consumer>
                     {
+                        
                         context => {
                             return(
                                 context.map(albums =>
@@ -18,7 +20,8 @@ class Albums extends Component {
                             )
                         }
                     }
-                </DataContext.Consumer> */}
+                </DataContext.Consumer>
+                
             </div> 
             <hr />          
         </div>
