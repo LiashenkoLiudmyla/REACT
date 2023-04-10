@@ -1,13 +1,19 @@
 import Albums from './components/Albums';
-import HooksTask from './components/HooksTask';
+import SquareDraw from './components/Squaredraw'
+import VideoPlayer from './components/VideoPlayer'
 
 import './App.css';
 
 function App() {
   return (
     <div> 
-      <Albums/>
-      <HooksTask/>
+      {/* <Albums/> */}
+      <hr />
+      <p>TASK 3</p>
+      <SquareDraw/>
+      <hr />
+      <p>VIDEO-PLAYER</p>
+      <VideoPlayer/>
     </div>
   );
 }

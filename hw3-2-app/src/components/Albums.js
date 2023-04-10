@@ -8,7 +8,7 @@ class Albums extends Component {
        
         return( 
         <div>
-            <p>TASK 2</p>            
+            <p>TASK 1</p>            
             <div>
                 <DataContext.Consumer>
                     {
@@ -23,7 +23,10 @@ class Albums extends Component {
                 </DataContext.Consumer>
                 
             </div> 
-            <hr />          
+            <hr />
+            <p>TASK 2-HOOKS-CONTEXT</p> 
+            <HooksTask/>
+                      
         </div>
         
         )        

@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.squaredraw {
+  margin: 0 auto;
+  margin-bottom: 25px;
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+}
+
+
+

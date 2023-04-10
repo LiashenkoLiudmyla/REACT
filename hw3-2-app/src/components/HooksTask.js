@@ -17,7 +17,7 @@ const HooksTask = () => {
 
         return(
                 <div>
-                    <p>useContext</p>
+                    <p>__useContext__</p>
                     {value.map(albums =>
                             <div key = {albums.id}>{albums.id} - {albums.userId} - {albums.title}</div> 
                         )
