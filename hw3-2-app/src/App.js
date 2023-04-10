@@ -1,5 +1,6 @@
 import Albums from './components/Albums';
 import SquareDraw from './components/Squaredraw'
+//import VideoPlayer from './components/VideoPlayer'
 import VideoPlayer from './components/VideoPlayer'
 
 import './App.css';
