@@ -1,3 +1,8 @@
+body{
+  max-width: 1200px;
+  margin: auto;
+}
+
 span{
     color:rgb(177, 7, 7);
     font-weight: bold;
@@ -5,3 +10,16 @@ span{
     text-transform:uppercase
 
   }
+
+
+
+button{
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  border-radius: 2px;
+}
+.img_btn_like{
+  max-width: 25px;
+  padding: 7px;
+}

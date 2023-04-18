@@ -1,15 +1,13 @@
-import User from "./Users";
+import User_Hook from "./User_Hook";
+import Album_Hook from "./Album_Hook"
 import { userData } from "../data/userData";
-import Album from "./Album";
-import { albumData } from "../data/albomsData";
+import { albumData } from "../data/albomsData"
 
-// const ALBUM_BASE_URL = "https://jsonplaceholder.typicode.com/albums/1/photos?_limit=10"
-
-const Task_1 = () => {
-    return (
-        <div>
-            <h2>Task 1</h2>
-            <User
+function Task_5() {
+  return (
+    <div>
+            <h2>Task 5</h2>
+            <User_Hook
                 username={userData.username}
                 email={userData.email}
                 phone={userData.phone}
@@ -19,12 +17,13 @@ const Task_1 = () => {
                 suite={userData.address.suite}
                 company={userData.company.name}
             />
-            <Album
+            <Album_Hook
                 title={albumData.title}
                 thumbnailUrl={albumData.thumbnailUrl}
             />
         </div>
-    )
+    
+  )
 }
 
-export default Task_1
+export default Task_5;

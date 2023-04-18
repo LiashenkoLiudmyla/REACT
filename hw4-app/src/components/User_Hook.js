@@ -1,14 +1,14 @@
 import './Users.css';
-import  withToggler  from "../HOCs/withToggler"
+import { useToggle } from '../hooks/useToggler';
 
 
 
-const User = ({ username, email, city, street, suite, phone, toggled, changeToggle }) => {  
-    
+const User_Hook = ({ username, email, city, street, suite, phone }) => {  
+    const [isLiked, setLiked] = useToggle(true)
     return (
         <div>
             <h4>{username} {email} </h4>
-            {toggled && 
+            {isLiked && 
             <h5> 
                <span> city:</span>{city} <br/>
                <span> street:</span>{street} <br/>
@@ -16,13 +16,11 @@ const User = ({ username, email, city, street, suite, phone, toggled, changeTogg
                <span> phone:</span>{phone} 
             </h5> 
             }
-            <button onClick={changeToggle}>See details</button>
+            <button onClick={setLiked}>See details</button>
             
         </div>
     )
       
 }
 
-export default withToggler(User);
-
-
+export default User_Hook;
