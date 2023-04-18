@@ -1,11 +1,9 @@
 
-const Post = ({title, completed }) => {  
-    
-    console.log('title', title)
-   
+const Post = ({title, completed, id }) => {  
+
     return (
        <li>
-        <div>{`Title: ${title} - completed: ${completed}`}</div>
+        <div>{`Id: ${id} - Title: ${title} - completed: ${completed}`}</div>
        </li>
     )
       

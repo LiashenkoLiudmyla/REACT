@@ -12,7 +12,7 @@ export const Task_3 = () => {
     <>
     <h2>Task_3</h2>
     <div className='example__container'>
-      <DataMaker url={getPosts} renderDataUrl={(data) => <Posts posts={data}/>}/>
+      <DataMaker url={getPosts} renderDataUrl={(data) => <Posts data={data}/>}/>
 
     </div>
     </>
