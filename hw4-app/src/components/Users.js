@@ -1,4 +1,3 @@
-import './Users.css';
 import  withToggler  from "../HOCs/withToggler"
 
 

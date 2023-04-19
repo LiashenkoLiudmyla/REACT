@@ -3,8 +3,7 @@ import React from 'react'
 import { DataMaker } from './DataMaker'
 import { Posts } from './Posts'
 
-const getPosts = "https://jsonplaceholder.typicode.com/posts"
-
+const getPosts = "https://jsonplaceholder.typicode.com/todos?_limit=10"
 
 
 export const Task_3 = () => {
