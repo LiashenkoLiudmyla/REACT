@@ -1,27 +1,59 @@
-body{
+body {
   font-family: arial, sans-serif;
   max-width: 1200px;
   margin: auto;
 }
-.product_card_list{
+
+.product_card_list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
 
-    
+
 }
-img{
+.category{
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.price{
+  font-weight: 200;
+  font-size: 16px;
+}
+.card_info{
+  position: "relative"; 
+z-index: 100;
+}
+.content {
+  position: fixed;
+  width: 10%;
+  /* height: 100%; */
+  color: azure;
+  background-color: rgb(175, 178, 178);
+  border-radius: 15px;
+  padding: 10px;
+  
+}
+
+img {
   max-height: 200px;
   max-width: 200px;
 }
-h4{
+
+h4 {
   color: rgb(6, 63, 120);
- 
+
 }
-h5{
+
+h5 {
   text-transform: capitalize;
 }
-.flex { 
+
+/* .flex {
+  
+} */
+
+.card_all {
+  
   max-width: 250px;
   background: #ffffff;
   padding: 5px 30px 0 30px;
@@ -31,12 +63,10 @@ h5{
   font-size: 20px;
   text-align: center;
   position: relative;
-  border-radius: 15px; 
-}
-.card{
+  border-radius: 15px;
   align-items: center;
-padding: 15px;
-  height: 450px;  
+  padding: 15px;
+  height: 450px;
   width: 400px;
   margin: 0 auto;
   box-shadow: 2px 4px 8px rgb(213, 213, 215);
@@ -44,28 +74,25 @@ padding: 15px;
 
 
 
-span{
-    color:rgb(67, 132, 197);
-    font-weight: bold;
-    text-decoration:underline;
-    text-transform:uppercase;
+span {
+  color: rgb(67, 132, 197);
+  font-weight: bold;
+  text-decoration: underline;
+  text-transform: uppercase;
 
-  }
+}
 
 
 
-button{
+button {
   background-color: rgb(67, 132, 197);
   color: white;
   border: none;
   border-radius: 2px;
   box-shadow: 2px 4px 8px rgb(213, 213, 215)
 }
-.img_btn_like{
+
+.img_btn_like {
   max-width: 25px;
   padding: 7px;
 }
-
-
- 
-
