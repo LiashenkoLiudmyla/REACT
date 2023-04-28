@@ -91,7 +91,7 @@ export const RouterApp = () => {
         <Route path="task4" element={<Task4 />} />
         <Route path="task5" element={<Task5 />} />
 
-        <Route path="description" element={<Description />}>
+        <Route path="task_description" element={<Description />}>
           <Route path=":taskId" element={<TaskDescription />} />
         </Route>
       </Routes>
