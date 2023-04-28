@@ -1,29 +1,25 @@
 import React, { useState } from "react";
 
 const withToggler = (WrappedComponent) => {
+  return (props) => {
+    const [toggled, setToggled] = useState(false);
 
-    return (props) => {
-
-    const [toggled, setToggled] = useState(false)  
-
-        const changeToggle = (toggleStatus) => {
-            setToggled(prev =>  {
-                if (typeof toggleStatus === "boolean") { 
-                    
-                    return toggleStatus;
-                }                
-                return !prev
-            });
-        };
-        return (
-        <WrappedComponent 
-            {...props} 
-            toggled={toggled} 
-            changeToggle={changeToggle}
-        />
-        );    
-    };    
+    const changeToggle = (toggleStatus) => {
+      setToggled((prev) => {
+        if (typeof toggleStatus === "boolean") {
+          return toggleStatus;
+        }
+        return !prev;
+      });
+    };
+    return (
+      <WrappedComponent
+        {...props}
+        toggled={toggled}
+        changeToggle={changeToggle}
+      />
+    );
+  };
 };
 
-export default withToggler
-
+export default withToggler;

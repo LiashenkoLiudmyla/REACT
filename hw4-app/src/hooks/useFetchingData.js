@@ -1,14 +1,9 @@
 import { useEffect, useState } from "react";
 
 export const useFetchingData = (url) => {
-
-  
-
   const [data, setData] = useState([]);
   const [lsLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-
-
 
   useEffect(() => {
     setIsLoading(true);

@@ -1,5 +1,5 @@
-import UserList from "./UserList"
-import AlbumList from "./AlbumList"
+import UserList from "../components/UserList"
+import AlbumList from "../components/AlbumList"
 
 const USER_BASE_URL = "https://jsonplaceholder.typicode.com/users?_limit=10"
  const ALBUM_BASE_URL = "https://jsonplaceholder.typicode.com/albums/1/photos?_limit=10"

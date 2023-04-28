@@ -1,16 +1,17 @@
-import withToggler from "../HOCs/withToggler";
+import { useToggle } from "../hooks/useToggler";
 
-const Album = ({ title, thumbnailUrl, toggled, changeToggle }) => {
+const AlbumHook = ({ title, thumbnailUrl }) => {
+  const [isLiked, setLiked] = useToggle(true);
   return (
     <div>
       <h4>
-        <img src={thumbnailUrl} alt="pict" />
+        <span>Album: {title}</span>
         <div>
-          <span className="category">Album: {title}</span>
+          <img src={thumbnailUrl} alt="pict" />
         </div>
 
-        <button onClick={changeToggle}>
-          {toggled ? (
+        <button onClick={setLiked}>
+          {isLiked ? (
             <img
               className="img_btn_like"
               src="../picture/like.png"
@@ -29,4 +30,4 @@ const Album = ({ title, thumbnailUrl, toggled, changeToggle }) => {
   );
 };
 
-export default withToggler(Album);
+export default AlbumHook;

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { DataMaker } from './DataMaker'
-import { Posts } from './Posts'
+import { DataMaker } from '../components/DataMaker'
+import { Posts } from '../components/Posts'
 
 const getPosts = "https://jsonplaceholder.typicode.com/todos?_limit=10"
 
