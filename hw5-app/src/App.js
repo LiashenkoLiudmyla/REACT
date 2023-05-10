@@ -1,10 +1,9 @@
-import CreditCard from "./pages/CreditCard"
-import './App.css';
+import { RouterApp } from './pages/RouterApp';
 
 function App() {
   return (
-    <div >
-      <CreditCard/>
+    <div className="App">
+      <RouterApp />
     </div>
   );
 }
