@@ -6,7 +6,7 @@ export const formatDateToMonthYear = (date) => {
     let month = dateParts[0];
     const year = dateParts[2].slice(-2);
 
-    if(month.length == 1){
+    if(month.length === 1){
         month = `0${month}`
     }
 
